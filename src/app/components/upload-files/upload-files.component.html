@@ -1,0 +1,11 @@
+
+      <div class="carousel-item active">
+        <div *ngIf="profiles.length > 0">
+          <div *ngFor="let profile of profiles"  class="profile" >
+
+            <img [src]="profile.imagePath" [alt]="profile.name" width="250" height="250" />
+
+            </div>
+
+          </div>
+        </div>

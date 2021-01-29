@@ -1,0 +1,12 @@
+<br>
+<br>
+
+  <div  >
+  <div class="card-data" >
+    <div class="card" *ngFor="let task of videos">
+      <video  source [src]="task.videoPath |safe "class="embed-responsive-item" class="gallery" type="video/mp4" width="400" height="250" controls></video>
+
+      <h3> {{task.videoname}}</h3>
+      <h4 style="color: rgb(37, 35, 35);"> {{task.subjectname}}</h4>
+      <button type="button" (click)="deleteVideo7(task._id)" class="btn btn-danger">Delete</button>
+  </div>

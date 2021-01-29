@@ -1,0 +1,39 @@
+.margin-left{
+  margin-left: 80px !important;
+}
+
+
+.img{
+  background-image: url('src/assets/video1.jpg');
+
+  background-size: cover;
+background-color: brown;
+height: 200px;
+
+  width: 300px;
+
+}
+
+
+.btn-circle.btn-xl {
+  width: 70px;
+  height: 70px;
+
+
+  font-size: 12px;
+  text-align: center;
+}
+
+.card-data {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+
+.mycontent-left {
+  border-right: 1px dashed #333;
+};
+
+

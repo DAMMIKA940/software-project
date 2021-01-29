@@ -1,0 +1,28 @@
+
+<div class="row pt-5">
+  <div class="col-md-6 mx-auto">
+      <div class="card rounded-0">
+          <div class="card-reader">
+       <h3 class="font-weight-bold" class="text-center" > Admin Login</h3>
+<form>
+
+    <form class="px-4 py-3">
+      <div class="form-group">
+        <label class="font-weight-bold" for="exampleDropdownFormEmail1">Email address</label>
+        <input type="email" class="form-control" id="email" placeholder="email@example.com" name="email" [(ngModel)]="loginAdminData.email">
+      </div>
+      <div class="form-group">
+        <label  class="font-weight-bold" for="exampleDropdownFormPassword1">Password</label>
+        <input type="password" class="form-control" id="password" placeholder="Password"name="password" [(ngModel)]='loginAdminData.password'>
+      </div>
+
+      <button  class="btn btn-primary"(click)='loginAdmin()' type="submit">Login</button>
+
+
+    </form>
+
+</form>
+
+
+
+

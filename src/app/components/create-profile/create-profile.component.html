@@ -1,0 +1,28 @@
+<body>
+  <h1 class="font-weight-bold" >Create Advertistment</h1>
+  <hr/>
+  <form [formGroup]="form" (submit)="onSubmit()">
+    <div>
+      <label class="font-weight-bold">Insert Subject name</label>
+      <br>
+      <input formControlName="name" type="text" placeholder="Enter name..." />
+    </div>
+    <div>
+      <br>
+      <label class="font-weight-bold">Select the Advertistment</label>
+      <br>
+      <input (change)="onFileSelect($event)" type="file" />
+    </div>
+    <br>
+    <div *ngIf="imageData">
+      <img [src]="imageData" [alt]="form.value.name" width="250" height="250" />
+    </div>
+    <div>
+
+      <label class="font-weight-bold">Upload the Advertistment</label>
+      <br>
+      <button type="submit" class="btn btn-success" >Upload Advertistment</button>
+    </div>
+  </form>
+
+  </body>

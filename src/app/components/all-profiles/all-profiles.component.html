@@ -1,0 +1,59 @@
+
+
+<!--
+  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div *ngIf="profiles.length > 0">
+          <div *ngFor="let profile of profiles" class="profile">
+            <div class="carousel-item">
+            <img [src]="profile.imagePath" [alt]="profile.name" width="250" height="250" class="float-left" />
+            <div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+     </div>
+     </div>
+      <button class="btn btn-info btn-sm" (click)="editTask(task)">Edit</button>
+                      &nbsp;&nbsp;
+     <img [src]="profile.imagePath" [alt]="profile.name" width="250" height="250" />
+            <button type="button"  (click)="onDelete(profile._id)" class="btn btn-danger">Delete</button>
+                      <button class="btn btn-danger btn-sm" (click)="deleteTask(task._id)">Delete</button>
+     </div>-->
+
+
+        <table class="table table-striped">
+          <thead class="thead-dark">
+
+                  <th scope="col">#</th>
+                  <th scope="col">name</th>
+                  <th scope="col">Link</th>
+                  <th scope="col">Advertisment</th>
+                  <th scope="col">Action</th>
+          </thead>
+          <tbody>
+              <tr  *ngFor="let profiles of profiles; let i = index">
+                  <td>{{i+1}}</td>
+                  <td>{{profiles.name}}</td>
+                  <td>{{profiles.imagePath}}</td>
+                    <img [src]="profiles.imagePath"  width="250" height="250" />
+                  <td>
+                    <button type="button"  (click)="onDelete(profiles._id)" class="btn btn-danger">Delete</button>
+                    &nbsp;&nbsp;
+                    
+                    <button type="button"  class="btn btn-info " routerLink="/app-create-profile">Upload</button>
+
+                  </td>
+
+              <tr>
+          </tbody>
+      </table>
+
+
+ <!-- <span>{{ task.name }}</span>-->
+
+
+
+

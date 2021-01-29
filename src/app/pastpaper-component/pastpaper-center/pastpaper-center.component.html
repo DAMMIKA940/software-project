@@ -1,0 +1,8 @@
+<div>
+
+  <app-pastpaper-detail *ngIf="selectedPastpaper" [pastpaper]="selectedPastpaper"  ></app-pastpaper-detail>
+</div>
+<div>
+
+  <app-pastpaper-list (SelectPastpaper) ="onSelectVideo($event)" [pastpapers] = "pastpapers" ></app-pastpaper-list>
+</div>

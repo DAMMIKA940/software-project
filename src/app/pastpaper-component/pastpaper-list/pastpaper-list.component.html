@@ -1,0 +1,44 @@
+<!--
+
+<br>
+<br>
+<div class="btn-toolbar">
+<a  (click)="onSelect(pastpaper)" *ngFor="let pastpaper of pastpapers" class="btn btn-outline-primary" type="submit"><a>{{pastpaper.name}}</a>
+  <br>
+name
+</button>
+
+</div>
+
+
+<table class="table table-striped">
+  <thead>
+
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">
+
+<a
+
+  (click)="onSelect(pastpaper)" *ngFor="let pastpaper of pastpapers" class="btn btn-outline-primary" type="submit"><a>{{pastpaper.name}}</a>
+</a>
+
+      </th>
+
+  </tbody>
+</table>
+-->
+<tbody>
+  <tr style="width:200px" *ngFor="let pastpaper of pastpapers; let i = index">
+
+
+
+
+      <td  style="width:250px">{{pastpaper.name}}</td>
+
+
+
+    <a  (click)="onSelect(pastpaper)" class="btn btn-outline-primary" type="submit"><a>{{pastpaper.name}}</a>
+
+  <tbody>

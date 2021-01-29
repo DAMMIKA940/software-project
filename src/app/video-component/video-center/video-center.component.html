@@ -1,0 +1,13 @@
+
+
+<div >
+
+  <video-detail  *ngIf="selectedVideo"   [video]="selectedVideo" (deleteVideoEvent)="onDeleteVideoEvent($event)" ></video-detail>
+
+<!-- && _authService.AdminloggedIn()-->
+  <video-list (SelectVideo) ="onSelectVideo($event)" [videos] = "videos" ></video-list>
+
+
+</div>
+
+

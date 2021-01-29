@@ -1,0 +1,12 @@
+.videos {
+
+  background-color: rgb(112, 228, 83);
+  background-image: src("/src/assets/videopage.jpg");
+  background-image: src('./video-component/src/assets/videopage.jpg');
+}
+
+.video1 { margin: 0 auto; width: 500px; }
+
+.h1 {text-align: left; width: 500px; color:rgb(25, 11, 100)}
+.h2 {text-align: left; width: 500px; color:rgb(80, 83, 78)}
+.h3 {text-align: left; width: 500px; color:rgb(4, 4, 7)}

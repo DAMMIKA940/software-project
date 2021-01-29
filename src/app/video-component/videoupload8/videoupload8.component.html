@@ -1,0 +1,15 @@
+
+
+  <form>
+
+    <div>
+
+      <input type="text" style="height:30px;font-size:9pt;width: 85px;" [(ngModel)]='uploadlink8.videoPath' class="form-control" id="exampleDropdownFormfirstName" placeholder="upload link"name="firstName" >
+      <input type="text" style="height:30px;font-size:9pt;width: 85px;" class="form-control" placeholder="subject name"name="videoname" [(ngModel)]='uploadlink8.videoname'>
+      <input type="text" style="height:30px;font-size:9pt;width: 85px;" class="form-control" placeholder="lesson name"name="subjectname" [(ngModel)]='uploadlink8.subjectname'>
+    </div>
+
+
+
+    <button  class="btn btn-primary btn-sm"(click)='sendData()' type="submit">Upload</button>
+  </form>

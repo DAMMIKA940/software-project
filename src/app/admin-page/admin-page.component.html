@@ -1,0 +1,59 @@
+<nav  class="navbar navbar-expand-lg navbar-dark navbar-expand-md py-md-1" style="background-color: #8d4b7d">
+  <a class="navbar-brand" href="#"><img src="./assets/logo.png" width="70" height="70" class="d-inline-block align-middle" alt=""></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+
+        <li class="nav-item">
+
+
+          <a class="nav-link"  routerLink="/home"  >Home</a>
+        </li>
+
+        <li class="nav-item">
+
+
+          <a class="nav-link"  routerLink="/videos"  > Admin Videos upload </a>
+        </li>
+
+        <li class="nav-item">
+
+
+          <a class="nav-link"  routerLink="/app-all-profiles"  >Advertisment</a>
+        </li>
+        <li class="nav-item">
+
+
+          <a class="nav-link"  routerLink="/app-video-page-grade"  >  Videos  </a>
+        </li>
+        <li class="nav-item">
+
+
+
+
+          <a class="nav-link"  routerLink="/app-pastpaper-center"  >PastPaper</a>
+        </li>
+        <li class="nav-item">
+
+
+          <a class="nav-link"  routerLink="/*special" >Lessons</a>
+        </li>
+
+
+    </ul>
+
+    <a class="nav-link"   routerLink="/admin-login"  >Login</a>
+    <br>
+    <a class="nav-link"    routerLink="/admin-registration" >Register</a>
+  <a class="nav-link"*ngIf="_authService.AdminloggedIn()"   (click)="_authService.logoutuser()">Logout</a>
+
+
+  </div>
+</nav>
+
+
+
+

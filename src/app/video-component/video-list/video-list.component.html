@@ -1,0 +1,86 @@
+
+
+<!--
+
+<button>
+    <button   *ngFor="let video of videos" class="btn btn-outline-primary" type="submit"><a>{{video.subjectname}}</a></button>
+
+    <button   *ngFor="let video of videos" class="btn btn-outline-primary" type="submit"><a>{{video.teachername}}</a></button>
+    <button   *ngFor="let video of videos" class="btn btn-outline-primary" type="submit"><a>{{video.name}}</a></button>
+    <button  (click)="onSelect(video)" *ngFor="let video of videos" class="btn btn-outline-danger" type="submit"> <p>click, watch the video</p></button>
+  </button>
+
+
+
+-->
+
+
+<table class="table table-striped">
+  <thead class="thead-dark">
+
+<th style="width:200px">Video Link</th>
+<th style="width:180px"> Teacher name</th>
+<th style="width:180px"> Grade</th>
+<th style="width:180px"> Subject </th>
+<th style="width:180px">Lesson </th>
+
+<th style="width:200px">Video </th>
+<th style="width:200px">Choose grade</th>
+<th style="width:200px">Video Upload</th>
+<th style="width:200px">Delete</th>
+  </thead>
+
+
+  <tbody >
+      <tr style="width:200px" *ngFor="let video of videos; let i = index">
+
+
+
+          <td  style="width:200px ;color:blue;" > <b>{{video.videoPath}}</b></td>
+          <td  style="width:200px ;color:rgb(26, 161, 33);" > <b>{{video.teachername}}</b></td>
+          <td  style="width:200px ;color:rgb(68, 51, 67);" ><b>{{video.insertgrade}}</b></td>
+
+          <td  style="width:200px ;color:rgb(0, 132, 255);" ><b>{{video.subjectname}}</b></td>
+          <td  style="width:250px ;color:rgb(124, 32, 32);" ><b>{{video.name}}</b></td>
+
+
+<td>
+  <video source [src]="video.videoPath |safe "class="embed-responsive-item"  type="video/mp4" width="90" height="100" controls></video>
+</td>
+<td>
+  <div class="tab">
+    <button class="btn btn-primary btn-sm" (click)="onTabClick(0)"> 06</button>
+    <button class="btn btn-secondary btn-sm" (click)="onTabClick(1)"> 07</button>
+    <button class="btn btn-success btn-sm" (click)="onTabClick(2)"> 08</button>
+    <button class="btn btn-danger btn-sm" (click)="onTabClick(3)"> 09</button>
+    <button class="btn btn-warning btn-sm" (click)="onTabClick(4)"> 10</button>
+    <button class="btn btn-dark btn-sm" (click)="onTabClick(5)"> 11</button>
+  </div>
+
+</td>
+<td>
+
+    <app-videoupload07  *ngIf="tabIndex === 1"> </app-videoupload07>
+    <app-videoupload06  *ngIf="tabIndex === 0"> </app-videoupload06>
+    <app-videoupload8  *ngIf="tabIndex === 2"> </app-videoupload8>
+    <app-videoupload9  *ngIf="tabIndex === 3"> </app-videoupload9>
+    <app-videoupload10  *ngIf="tabIndex === 4"> </app-videoupload10>
+    <app-videoupload11  *ngIf="tabIndex === 5"> </app-videoupload11>
+
+
+</td>
+<td >
+
+  <button type="button" (click)="deleteVideo(video._id)" class="btn btn-danger">Delete</button>
+</td>
+        </tr>
+  </tbody>
+</table>
+
+
+
+
+
+
+
+

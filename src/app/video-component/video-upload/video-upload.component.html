@@ -1,0 +1,76 @@
+
+
+
+
+<body>
+  <h1 class="font-weight-bold" class="text-warning" >Insert Video to Database <span class="badge badge-secondary"></span></h1>
+  <hr class="font-weight-bold"  />
+
+
+  <form [formGroup]="form" (submit)="onSubmit()">
+    <div>
+      <label class="font-weight-bold">Insert Grade </label>
+      <br>
+      <select formControlName="insertgrade">
+        <option value="grade 06">grade 06</option>
+        <option value="grade 07">grade 07</option>
+        <option value="grade 08">grade 08</option>
+        <option value="grade 09">grade 09</option>
+        <option value="grade 10">grade 10</option>
+        <option value="grade 11">grade 11</option>
+
+      </select>
+
+     <!-- <input formControlName="subjectname" type="text" placeholder="Enter name..." /> -->
+    </div>
+
+    <div>
+      <label class="font-weight-bold">Insert subject name</label>
+      <br>
+      <select formControlName="subjectname">
+        <option value="Maths">Maths</option>
+        <option value="Science">Science</option>
+        <option value="English">English</option>
+        <option value="Sinhala" selected>Sinhala</option>
+        <option value="History" selected>History</option>
+
+      </select>
+
+     <!-- <input formControlName="subjectname" type="text" placeholder="Enter name..." /> -->
+    </div>
+
+    <div>
+      <label class="font-weight-bold">Insert lesson name</label>
+      <br>
+
+      <input formControlName="name" type="text" placeholder="Enter name..." />
+    </div>
+    <div>
+      <label class="font-weight-bold">Insert Teacher name</label>
+      <br>
+
+      <input formControlName="teachername" type="text" placeholder="Enter  teacher name..." />
+    </div>
+    <div>
+      <br>
+      <label class="font-weight-bold">Select Video</label>
+      <br>
+      <br>
+      <input (change)="onFileSelect($event)" type="file"/>
+    </div>
+
+    <div>
+      <br>
+      <label class="font-weight-bold">Upload the video </label>
+      <br>
+      <br>
+      <button type="submit" class="btn btn-success" >Upload Video</button>
+      <br>
+      <br>
+    </div>
+  </form>
+
+  </body>
+
+
+
